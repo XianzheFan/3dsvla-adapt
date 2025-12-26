@@ -1,0 +1,11 @@
+tensorboard
+moviepy
+natsort
+psutil
+timeout-decorator
+pyrender==0.1.45
+omegaconf
+hydra-core==1.1.0
+pandas
+opencv-python-headless
+

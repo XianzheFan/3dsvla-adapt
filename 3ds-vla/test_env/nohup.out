@@ -1,0 +1,234 @@
+
+X.Org X Server 1.20.13
+X Protocol Version 11, Revision 0
+Build Operating System: linux Ubuntu
+Current Operating System: Linux di-20240715145134-tf8sw 5.4.250-2-velinux1u1-amd64 #velinux1u1 SMP Debian 5.4.250-2-velinux1u1 Tue Dec 5 02:59:44 U x86_64
+Kernel command line: BOOT_IMAGE=/boot/vmlinuz-5.4.250-2-velinux1u1-amd64 root=UUID=dac47e2e-bcc0-443a-b33e-16869ac1d4a6 ro intel_idle.max_cstate=1 processor.max_cstate=1 iommu=pt swapaccount=1 net.ifnames=0 transparent_hugepage=madvise nopti crash_kexec_post_notifiers selinux=0 apparmor=1 security=apparmor console=tty0 console=ttyS0,115200 crashkernel=128M,low crashkernel=256M,high
+Build Date: 09 April 2024  01:36:10AM
+xorg-server 2:1.20.13-1ubuntu1~20.04.17 (For technical support please see http://www.ubuntu.com/support) 
+Current version of pixman: 0.38.4
+	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+(==) Log file: "/var/log/Xorg.0.log", Time: Mon Aug 26 05:07:10 2024
+(==) Using config file: "/etc/X11/xorg.conf"
+(==) Using config directory: "/etc/X11/xorg.conf.d"
+(==) Using system config directory "/usr/share/X11/xorg.conf.d"
+(EE) 
+Fatal server error:
+(EE) parse_vt_settings: Cannot open /dev/tty0 (No such file or directory)
+(EE) 
+(EE) 
+Please consult the The X.Org Foundation support 
+	 at http://wiki.x.org
+ for help. 
+(EE) Please also check the log file at "/var/log/Xorg.0.log" for additional information.
+(EE) 
+(EE) Server terminated with error (1). Closing log file.
+
+X.Org X Server 1.20.13
+X Protocol Version 11, Revision 0
+Build Operating System: linux Ubuntu
+Current Operating System: Linux di-20240715145134-tf8sw 5.4.250-2-velinux1u1-amd64 #velinux1u1 SMP Debian 5.4.250-2-velinux1u1 Tue Dec 5 02:59:44 U x86_64
+Kernel command line: BOOT_IMAGE=/boot/vmlinuz-5.4.250-2-velinux1u1-amd64 root=UUID=dac47e2e-bcc0-443a-b33e-16869ac1d4a6 ro intel_idle.max_cstate=1 processor.max_cstate=1 iommu=pt swapaccount=1 net.ifnames=0 transparent_hugepage=madvise nopti crash_kexec_post_notifiers selinux=0 apparmor=1 security=apparmor console=tty0 console=ttyS0,115200 crashkernel=128M,low crashkernel=256M,high
+Build Date: 09 April 2024  01:36:10AM
+xorg-server 2:1.20.13-1ubuntu1~20.04.17 (For technical support please see http://www.ubuntu.com/support) 
+Current version of pixman: 0.38.4
+	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+(==) Log file: "/var/log/Xorg.0.log", Time: Mon Aug 26 05:08:44 2024
+(==) Using config file: "/etc/X11/xorg.conf"
+(==) Using config directory: "/etc/X11/xorg.conf.d"
+(==) Using system config directory "/usr/share/X11/xorg.conf.d"
+(EE) 
+Fatal server error:
+(EE) parse_vt_settings: Cannot open /dev/tty0 (No such file or directory)
+(EE) 
+(EE) 
+Please consult the The X.Org Foundation support 
+	 at http://wiki.x.org
+ for help. 
+(EE) Please also check the log file at "/var/log/Xorg.0.log" for additional information.
+(EE) 
+(EE) Server terminated with error (1). Closing log file.
+
+X.Org X Server 1.20.13
+X Protocol Version 11, Revision 0
+Build Operating System: linux Ubuntu
+Current Operating System: Linux di-20240715145134-tf8sw 5.4.250-2-velinux1u1-amd64 #velinux1u1 SMP Debian 5.4.250-2-velinux1u1 Tue Dec 5 02:59:44 U x86_64
+Kernel command line: BOOT_IMAGE=/boot/vmlinuz-5.4.250-2-velinux1u1-amd64 root=UUID=dac47e2e-bcc0-443a-b33e-16869ac1d4a6 ro intel_idle.max_cstate=1 processor.max_cstate=1 iommu=pt swapaccount=1 net.ifnames=0 transparent_hugepage=madvise nopti crash_kexec_post_notifiers selinux=0 apparmor=1 security=apparmor console=tty0 console=ttyS0,115200 crashkernel=128M,low crashkernel=256M,high
+Build Date: 09 April 2024  01:36:10AM
+xorg-server 2:1.20.13-1ubuntu1~20.04.17 (For technical support please see http://www.ubuntu.com/support) 
+Current version of pixman: 0.38.4
+	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+(==) Log file: "/var/log/Xorg.99.log", Time: Mon Aug 26 05:09:35 2024
+(==) Using config file: "/etc/X11/xorg.conf"
+(==) Using config directory: "/etc/X11/xorg.conf.d"
+(==) Using system config directory "/usr/share/X11/xorg.conf.d"
+(EE) 
+Fatal server error:
+(EE) parse_vt_settings: Cannot open /dev/tty0 (No such file or directory)
+(EE) 
+(EE) 
+Please consult the The X.Org Foundation support 
+	 at http://wiki.x.org
+ for help. 
+(EE) Please also check the log file at "/var/log/Xorg.99.log" for additional information.
+(EE) 
+(EE) Server terminated with error (1). Closing log file.
+
+X.Org X Server 1.20.13
+X Protocol Version 11, Revision 0
+Build Operating System: linux Ubuntu
+Current Operating System: Linux di-20240715145134-tf8sw 5.4.250-2-velinux1u1-amd64 #velinux1u1 SMP Debian 5.4.250-2-velinux1u1 Tue Dec 5 02:59:44 U x86_64
+Kernel command line: BOOT_IMAGE=/boot/vmlinuz-5.4.250-2-velinux1u1-amd64 root=UUID=dac47e2e-bcc0-443a-b33e-16869ac1d4a6 ro intel_idle.max_cstate=1 processor.max_cstate=1 iommu=pt swapaccount=1 net.ifnames=0 transparent_hugepage=madvise nopti crash_kexec_post_notifiers selinux=0 apparmor=1 security=apparmor console=tty0 console=ttyS0,115200 crashkernel=128M,low crashkernel=256M,high
+Build Date: 09 April 2024  01:36:10AM
+xorg-server 2:1.20.13-1ubuntu1~20.04.17 (For technical support please see http://www.ubuntu.com/support) 
+Current version of pixman: 0.38.4
+	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+(==) Log file: "/var/log/Xorg.0.log", Time: Mon Aug 26 05:14:29 2024
+(==) Using config file: "/etc/X11/xorg.conf"
+(==) Using config directory: "/etc/X11/xorg.conf.d"
+(==) Using system config directory "/usr/share/X11/xorg.conf.d"
+(EE) 
+Fatal server error:
+(EE) parse_vt_settings: Cannot open /dev/tty0 (No such file or directory)
+(EE) 
+(EE) 
+Please consult the The X.Org Foundation support 
+	 at http://wiki.x.org
+ for help. 
+(EE) Please also check the log file at "/var/log/Xorg.0.log" for additional information.
+(EE) 
+(EE) Server terminated with error (1). Closing log file.
+
+X.Org X Server 1.20.13
+X Protocol Version 11, Revision 0
+Build Operating System: linux Ubuntu
+Current Operating System: Linux di-20240715145134-tf8sw 5.4.250-2-velinux1u1-amd64 #velinux1u1 SMP Debian 5.4.250-2-velinux1u1 Tue Dec 5 02:59:44 U x86_64
+Kernel command line: BOOT_IMAGE=/boot/vmlinuz-5.4.250-2-velinux1u1-amd64 root=UUID=dac47e2e-bcc0-443a-b33e-16869ac1d4a6 ro intel_idle.max_cstate=1 processor.max_cstate=1 iommu=pt swapaccount=1 net.ifnames=0 transparent_hugepage=madvise nopti crash_kexec_post_notifiers selinux=0 apparmor=1 security=apparmor console=tty0 console=ttyS0,115200 crashkernel=128M,low crashkernel=256M,high
+Build Date: 09 April 2024  01:36:10AM
+xorg-server 2:1.20.13-1ubuntu1~20.04.17 (For technical support please see http://www.ubuntu.com/support) 
+Current version of pixman: 0.38.4
+	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+(==) Log file: "/var/log/Xorg.0.log", Time: Mon Aug 26 05:19:58 2024
+(==) Using config file: "/etc/X11/xorg.conf"
+(==) Using config directory: "/etc/X11/xorg.conf.d"
+(==) Using system config directory "/usr/share/X11/xorg.conf.d"
+(EE) 
+Fatal server error:
+(EE) parse_vt_settings: Cannot open /dev/tty0 (No such file or directory)
+(EE) 
+(EE) 
+Please consult the The X.Org Foundation support 
+	 at http://wiki.x.org
+ for help. 
+(EE) Please also check the log file at "/var/log/Xorg.0.log" for additional information.
+(EE) 
+(EE) Server terminated with error (1). Closing log file.
+
+X.Org X Server 1.20.13
+X Protocol Version 11, Revision 0
+Build Operating System: linux Ubuntu
+Current Operating System: Linux di-20240715145134-tf8sw 5.4.250-2-velinux1u1-amd64 #velinux1u1 SMP Debian 5.4.250-2-velinux1u1 Tue Dec 5 02:59:44 U x86_64
+Kernel command line: BOOT_IMAGE=/boot/vmlinuz-5.4.250-2-velinux1u1-amd64 root=UUID=dac47e2e-bcc0-443a-b33e-16869ac1d4a6 ro intel_idle.max_cstate=1 processor.max_cstate=1 iommu=pt swapaccount=1 net.ifnames=0 transparent_hugepage=madvise nopti crash_kexec_post_notifiers selinux=0 apparmor=1 security=apparmor console=tty0 console=ttyS0,115200 crashkernel=128M,low crashkernel=256M,high
+Build Date: 09 April 2024  01:36:10AM
+xorg-server 2:1.20.13-1ubuntu1~20.04.17 (For technical support please see http://www.ubuntu.com/support) 
+Current version of pixman: 0.38.4
+	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+(==) Log file: "/var/log/Xorg.0.log", Time: Mon Aug 26 05:23:01 2024
+(==) Using config file: "/etc/X11/xorg.conf"
+(==) Using config directory: "/etc/X11/xorg.conf.d"
+(==) Using system config directory "/usr/share/X11/xorg.conf.d"
+(EE) 
+Fatal server error:
+(EE) parse_vt_settings: Cannot open /dev/tty0 (No such file or directory)
+(EE) 
+(EE) 
+Please consult the The X.Org Foundation support 
+	 at http://wiki.x.org
+ for help. 
+(EE) Please also check the log file at "/var/log/Xorg.0.log" for additional information.
+(EE) 
+(EE) Server terminated with error (1). Closing log file.
+
+X.Org X Server 1.20.13
+X Protocol Version 11, Revision 0
+Build Operating System: linux Ubuntu
+Current Operating System: Linux di-20240715145134-tf8sw 5.4.250-2-velinux1u1-amd64 #velinux1u1 SMP Debian 5.4.250-2-velinux1u1 Tue Dec 5 02:59:44 U x86_64
+Kernel command line: BOOT_IMAGE=/boot/vmlinuz-5.4.250-2-velinux1u1-amd64 root=UUID=dac47e2e-bcc0-443a-b33e-16869ac1d4a6 ro intel_idle.max_cstate=1 processor.max_cstate=1 iommu=pt swapaccount=1 net.ifnames=0 transparent_hugepage=madvise nopti crash_kexec_post_notifiers selinux=0 apparmor=1 security=apparmor console=tty0 console=ttyS0,115200 crashkernel=128M,low crashkernel=256M,high
+Build Date: 09 April 2024  01:36:10AM
+xorg-server 2:1.20.13-1ubuntu1~20.04.17 (For technical support please see http://www.ubuntu.com/support) 
+Current version of pixman: 0.38.4
+	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+(==) Log file: "/var/log/Xorg.0.log", Time: Mon Aug 26 05:24:05 2024
+(==) Using config file: "/etc/X11/xorg.conf"
+(==) Using config directory: "/etc/X11/xorg.conf.d"
+(==) Using system config directory "/usr/share/X11/xorg.conf.d"
+(EE) 
+Fatal server error:
+(EE) parse_vt_settings: Cannot open /dev/tty0 (No such file or directory)
+(EE) 
+(EE) 
+Please consult the The X.Org Foundation support 
+	 at http://wiki.x.org
+ for help. 
+(EE) Please also check the log file at "/var/log/Xorg.0.log" for additional information.
+(EE) 
+(EE) Server terminated with error (1). Closing log file.
+
+X.Org X Server 1.20.13
+X Protocol Version 11, Revision 0
+Build Operating System: linux Ubuntu
+Current Operating System: Linux di-20240715145134-tf8sw 5.4.250-2-velinux1u1-amd64 #velinux1u1 SMP Debian 5.4.250-2-velinux1u1 Tue Dec 5 02:59:44 U x86_64
+Kernel command line: BOOT_IMAGE=/boot/vmlinuz-5.4.250-2-velinux1u1-amd64 root=UUID=dac47e2e-bcc0-443a-b33e-16869ac1d4a6 ro intel_idle.max_cstate=1 processor.max_cstate=1 iommu=pt swapaccount=1 net.ifnames=0 transparent_hugepage=madvise nopti crash_kexec_post_notifiers selinux=0 apparmor=1 security=apparmor console=tty0 console=ttyS0,115200 crashkernel=128M,low crashkernel=256M,high
+Build Date: 09 April 2024  01:36:10AM
+xorg-server 2:1.20.13-1ubuntu1~20.04.17 (For technical support please see http://www.ubuntu.com/support) 
+Current version of pixman: 0.38.4
+	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+(==) Log file: "/var/log/Xorg.0.log", Time: Mon Aug 26 05:24:35 2024
+(==) Using config file: "/etc/X11/xorg.conf"
+(==) Using config directory: "/etc/X11/xorg.conf.d"
+(==) Using system config directory "/usr/share/X11/xorg.conf.d"
+(EE) 
+Fatal server error:
+(EE) parse_vt_settings: Cannot open /dev/tty0 (No such file or directory)
+(EE) 
+(EE) 
+Please consult the The X.Org Foundation support 
+	 at http://wiki.x.org
+ for help. 
+(EE) Please also check the log file at "/var/log/Xorg.0.log" for additional information.
+(EE) 
+(EE) Server terminated with error (1). Closing log file.
+sudo: X: command not found
+sudo: X: command not found

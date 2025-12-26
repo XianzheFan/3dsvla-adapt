@@ -1,0 +1,11 @@
+src/
+RLBench/
+CoppeliaSim_Edu_V4_1_0_Ubuntu20_04/
+3ds-vla/demos
+3ds-vla/save
+3ds-vla/pretrain
+3ds-vla/exp
+3ds-vla/pytorch3d
+3ds-vla/data/train_json_single
+3ds-vla/data/train_json_1225
+3ds-vla/data/train_json

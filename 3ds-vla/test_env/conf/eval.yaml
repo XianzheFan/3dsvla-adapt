@@ -1,0 +1,65 @@
+method:
+    name: "PERACT_BC"
+
+rlbench:
+    task_name: "multi"
+    #tasks: [put_toilet_roll_on_stand]
+    #tasks: [close_drawer]
+    #tasks: [stack_blocks,open_microwave,place_wine_at_rack_location,open_fridge,sweep_to_dustpan,close_box,lamp_on,unplug_charger,close_fridge,close_jar,close_drawer]
+    #tasks: [toilet_seat_down,close_box,close_laptop_lid,take_usb_out_of_computer,put_toilet_roll_on_stand,sweep_to_dustpan,water_plants,take_shoes_out_of_box,lamp_on]
+    #tasks: [put_toilet_roll_on_stand]
+    #tasks: [ put_rubbish_in_bin]
+    #tasks: [lamp_on,unplug_charger,close_fridge,close_jar,close_drawer]
+    #tasks: [turn_tap,light_bulb_in,stack_blocks,push_button,open_microwave]
+    #tasks: [put_toilet_roll_on_stand,take_usb_out_of_computer,put_rubbish_in_bin,close_laptop_lid,toilet_seat_down]
+    #water_plants,take_umbrella_out_of_umbrella_stand,press_switch,take_frame_off_hanger,close_laptop_lid,toilet_seat_down
+    #unplug_charger,close_laptop_lid,press_switch,take_frame_off_hanger,toilet_seat_down
+    #straighten_rope, phone_on_base
+    tasks: ['put_rubbish_in_bin','unplug_charger','toilet_seat_down','lamp_on','close_microwave']
+    #tasks: [close_jar,close_drawer]
+    # tasks: [stack_blocks]
+    # tasks: [sweep_to_dustpan,take_usb_out_of_computer,put_rubbish_in_bin,change_clock,take_umbrella_out_of_umbrella_stand,put_knife_on_chopping_board,take_off_weighing_scales,take_frame_off_hanger]
+    # tasks: ['water_plants']
+    # 'straighten_rope','pour_from_cup_to_cup','place_hanger_on_rack','take_umbrella_out_of_umbrella_stand','take_frame_off_hanger','put_plate_in_colored_dish_rack','take_off_weighing_scales','put_knife_on_chopping_board','change_clock'
+    demo_path: ${oc.env:PROJECT_ROOT}/3ds-vla/demos
+    episode_length: 9
+    #cameras: [front,left_shoulder,right_shoulder,wrist]
+    cameras: [front]
+    #camera_resolution: [128, 128]
+    camera_resolution: [672,672]
+    scene_bounds: [-0.3, -0.5, 0.6, 0.7, 0.5, 1.6]
+    include_lang_goal_in_obs: True
+    time_in_state: True
+    headless: True
+
+framework:
+    tensorboard_logging: True
+    csv_logging: True
+    gpu: 0
+    logdir: ${oc.env:PROJECT_ROOT}/3ds-vla/save/
+    adapter_path: ${oc.env:PROJECT_ROOT}/3ds-vla/exp/pretrain1/checkpoint-9.pth
+    #adapter_path: '/vepfs-cnsh4137610c2f4c/algo/user8/lixiaoqi/cloris/LLaMA-Adapter-v3-Demo-release_336_large_Chinese_ori/exp/exp-905-train_data_v1_0909_touch2d_plain0909/checkpoint-9.pth'
+    #adapter_path: '/vepfs-cnsh4137610c2f4c/algo/user8/lixiaoqi/cloris/LLaMA-Adapter-v3-Demo-release_336_large_Chinese_ori/exp/exp-909_train_data_v1_0909_touch3d_plain0909/checkpoint-9.pth'
+    llama_path: ${oc.env:PROJECT_ROOT}/3ds-vla/pretrain/llama_model_weights
+    start_seed: 0
+    record_every_n: 5
+    dimensions: 2
+    box_flag: True
+    target_flag: True
+    aff_flag: True
+    rotmat_flag: False
+    task_name_flag: True
+
+    eval_envs: 1
+    eval_from_eps_number: 0
+    eval_episodes: 8
+    #eval_type: 'missing' # or 'best'
+    #eval_type: 'best'
+    eval_save_metrics: True
+
+cinematic_recorder:
+    enabled: True
+    camera_resolution: [128, 128]
+    fps: 30
+    rotate_speed: 0.005
+    save_path: '$PERACT_ROOT/videos/'

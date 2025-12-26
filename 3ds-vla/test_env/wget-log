@@ -1,0 +1,11 @@
+--2024-08-27 14:51:12--  https://downloads.coppeliarobotics.com/V4_1_0/CoppeliaSim_Edu_V4_1_0_Ubuntu20_04.tar.xz
+Resolving downloads.coppeliarobotics.com (downloads.coppeliarobotics.com)... 85.10.159.187, 2a01:7c8:f0:1102:0:1:39f8:c3fb
+Connecting to downloads.coppeliarobotics.com (downloads.coppeliarobotics.com)|85.10.159.187|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 156375216 (149M) [application/x-xz]
+Saving to: 'CoppeliaSim_Edu_V4_1_0_Ubuntu20_04.tar.xz'
+
+CoppeliaSim_Edu_V4_1_0_Ubuntu20_04.tar.xz               4%[====>                                                                                                                    ]   6.56M  13.0KB/s    in 7m 38s  
+
+2024-08-28 11:26:14 (14.7 KB/s) - Read error at byte 6881027/156375216 (Success). Retrying.
+
