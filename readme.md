@@ -30,6 +30,10 @@ To train or test the model with our data, please download [Data](https://hugging
 * Place `checkpoint-478000.pth` here.
 * Place `llama_model_weights` here.
 
+### GroundingDino Folder (`./3ds-vla/Grounded-Segment-Anything/`)
+* Place `sam_vit_h_4b8939.pth` here.
+* Place `groundingdino_swint_ogc.pth` here.
+
 ### Testing & Experiment Folders
 * Place `demos.zip` under `./3ds-vla/` and unzip.
 * Place `checkpoint-9.pth` under `./3ds-vla/exp/pretrain1`.
