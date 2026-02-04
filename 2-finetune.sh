@@ -1,5 +1,3 @@
-
-
 OUTPUT_DIR='./3ds-vla/exp/train_model'
 mkdir -p "$OUTPUT_DIR"
 # #5e-3

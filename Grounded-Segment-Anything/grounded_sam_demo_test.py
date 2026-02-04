@@ -301,13 +301,13 @@ def rope_endpoint(mask):
     except:
         return None, None
 def generate_mask(img_path, out_dir, rgb_id,task_name,seed,step):
-    config='/qiyuan_research_vepfs_001/lixiaoqi/3ds-vla/Grounded-Segment-Anything/GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py'
-    checkpoint='/qiyuan_research_vepfs_001/lixiaoqi/3ds-vla/Grounded-Segment-Anything/groundingdino_swint_ogc.pth'
+    config='Grounded-Segment-Anything/GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py'
+    checkpoint='Grounded-Segment-Anything/groundingdino_swint_ogc.pth'
     device='cpu'
     box_threshold=0.3
     text_threshold=0.25
     use_sam_hq=False
-    sam_checkpoint='/qiyuan_research_vepfs_001/lixiaoqi/3ds-vla/Grounded-Segment-Anything/sam_vit_h_4b8939.pth'
+    sam_checkpoint='Grounded-Segment-Anything/sam_vit_h_4b8939.pth'
     sam_version='vit_h'
     #CAT_LIST = {'lamp on':'little green light switch', 'turn on the light':'little green light switch', 'close fridge': 'fridge', 'close microwave': 'microwave with the whole body', 'drawer': 'drawer', 'close laptop lid': 'laptop', 'toilet seat': 'toilet seat with two parts', 'close box':'box with two parts', 'put toilet roll on stand': 'the smallest cylindrical toilet roll that is on the box', 'take usb out of computer':'This is a small usb connected to a big computer. Find the small usb.', 'take shoes out of box':'box with two parts', 'lamp on':'little green light switch', 'unplug charger':'charger on vertical board', 'water plants':'watering can','sweep dirt to dustpan':'the dark brown long pole with two parts'}
     CAT_LIST = {'turn_on':'little green light switch','slide_the_block_to_target':'red block','button':'round button','rack':'wine','put_rubbish_in_bin':'the smallest white rubbish at the bottom','open_microwave':'small handle on microwave','jar': 'small grey circle on the table', 'close_fridge': 'fridge', 'close_microwave': 'microwave with the whole body', 'close_laptop_lid': 'laptop', 'toilet_seat_down': 'toilet seat with two parts', 'close_box':'box with two parts', 'put_toilet_roll': 'the smallest cylindrical toilet roll that is on the box', 'take_usb_out_of_computer':'This is a small usb connected to a big computer. Find the small usb.', 'unplug_charger':'the smallest black charger on vertical board', 'water_plants':'watering can','dustpan':'the dark brown long pole with two parts'}
@@ -568,13 +568,13 @@ def generate_mask(img_path, out_dir, rgb_id,task_name,seed,step):
     return top_left,bottom_right
 
 def generate_target_mask(img_path, out_dir, rgb_id,task_name,seed,step,tl_pre=None,br_pre=None):
-    config='/qiyuan_research_vepfs_001/lixiaoqi/3ds-vla/Grounded-Segment-Anything/GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py'
-    checkpoint='/qiyuan_research_vepfs_001/lixiaoqi/3ds-vla/Grounded-Segment-Anything/groundingdino_swint_ogc.pth'
+    config='Grounded-Segment-Anything/GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py'
+    checkpoint='Grounded-Segment-Anything/groundingdino_swint_ogc.pth'
     device='cpu'
     box_threshold=0.3
     text_threshold=0.25
     use_sam_hq=False
-    sam_checkpoint='/qiyuan_research_vepfs_001/lixiaoqi/3ds-vla/Grounded-Segment-Anything/sam_vit_h_4b8939.pth'
+    sam_checkpoint='Grounded-Segment-Anything/sam_vit_h_4b8939.pth'
     sam_version='vit_h'
     TARGET_CAT_LIST = {'put_rubbish_in_bin':'black bin','blocks':'light green','put_toilet_roll_on_stand':'the thin standing stand','slide_the_block_to_target':'green square','water_plants':'green plant','dustpan':'bigger dark dustpan','water_plants':'green plant','stack_the_wine_bottle_to_the_middle_of_the_rack':'rack'}
     TARGET_CAT_LIST.update({'bimanual_straighten_rope':'green block','bimanual_push_box':'red square','beat_the_buzz':'orange handle','put_the_phone_on_the_base':'orange phone', 'pick_up_the_hanger_and_place_in_on_the_rackput_the_hanger_on_the_rack':'grey long rack line','put_the_knife_on_the_chopping_board':'small chopping board on table','put_the_plate_between_the_red_pillars_of_the_dish_rack':'red lines','straighten_rope':'green block'})

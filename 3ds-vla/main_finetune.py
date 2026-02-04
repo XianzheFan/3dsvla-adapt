@@ -7,7 +7,7 @@ import util.misc as misc
 from util.misc import NativeScalerWithGradNormCount as NativeScaler
 from llama.llama_adapter import LLaMA_adapter
 
-from data.dataset import FinetuneDataset, FinetuneDatasetReal
+from data.dataset import FinetuneDataset, FinetuneDatasetReal, FinetuneDatasetRLDS, transform_train
 #from data.dataset_navie_pose2pose import FinetuneDataset
 
 import argparse
@@ -32,7 +32,7 @@ def get_args_parser():
     # Model parameters
     parser.add_argument('--llama_type', default='7B', type=str,
                         help='Type of LLaMA model') #
-    parser.add_argument('--llama_path', default='/home/jiyao/mingxu/llama_model_weights/', type=str,
+    parser.add_argument('--llama_path', default='3ds-vla/pretrain/llama_model_weights/', type=str,
                         help='path to LLaMA pretrained checkpoint')
     parser.add_argument('--pretrained_path', default='/data1/llama_7b_beta/7B-beta.pth', type=str,
                         help='path to checkpoint from pretrain stage')
@@ -56,7 +56,8 @@ def get_args_parser():
     # Dataset parameters
     parser.add_argument('--data_config', default='/home/pgao/zzsly/GPT/DetGPT/coco_data/coco_task_annotation.json', type=str,
                         help='dataset config path')
-    parser.add_argument('--num_workers', default=16, type=int)
+    parser.add_argument('--num_workers', default=0, type=int)
+    # parser.add_argument('--num_workers', default=16, type=int)
     parser.add_argument('--pin_mem', action='store_true',
                         help='Pin CPU memory in DataLoader for more efficient (sometimes) transfer to GPU.')
     parser.add_argument('--range_loss', action='store_true',
@@ -84,6 +85,13 @@ def get_args_parser():
 
     parser.add_argument('--start_epoch', default=0, type=int, metavar='N',
                         help='start epoch')
+    
+    parser.add_argument('--use_rlds', action='store_true', help='use RLDS(TFDS) dataset instead of json dataset')
+    parser.add_argument('--rlds_root', type=str, default='', help='root dir that contains multiple TFDS subfolders (each has dataset_info.json)')
+    parser.add_argument('--rlds_use_depth', action='store_true', help='build point cloud from depth')
+    parser.add_argument('--rlds_pc_num', type=int, default=2304)
+    parser.add_argument('--rlds_prefetch', type=int, default=8)
+    parser.add_argument('--rlds_stride', type=int, default=2, help='depth backproject stride (bigger=less points,faster)')
 
     # distributed training parameters
     parser.add_argument('--world_size', default=1, type=int,
@@ -149,10 +157,26 @@ def main(args):
 
     misc.load_model(model_without_ddp, args.pretrained_path)                  ###加载预训练模型
 
-    if args.real_data:
-        dataset_train = FinetuneDatasetReal(max_words=args.max_words, tokenizer_path=llama_tokenzier_path, data_config = args.data_config)
+    if args.use_rlds:
+        assert args.rlds_root and os.path.isdir(args.rlds_root), f"--rlds_root invalid: {args.rlds_root}"
+        dataset_train = FinetuneDatasetRLDS(
+            rlds_root=args.rlds_root,
+            tokenizer_path=llama_tokenzier_path,
+            max_words=args.max_words,
+            train=True,
+            use_depth=args.rlds_use_depth,
+            pc_num=args.rlds_pc_num,
+            prefetch=args.rlds_prefetch,
+            sample_stride=args.rlds_stride,
+            max_traj_samples=1,
+            transform=transform_train,
+        )
+        # args.num_workers = 0
     else:
-        dataset_train = FinetuneDataset(max_words=args.max_words, tokenizer_path=llama_tokenzier_path, data_config = args.data_config)
+        if args.real_data:
+            dataset_train = FinetuneDatasetReal(max_words=args.max_words, tokenizer_path=llama_tokenzier_path, data_config = args.data_config)
+        else:
+            dataset_train = FinetuneDataset(max_words=args.max_words, tokenizer_path=llama_tokenzier_path, data_config = args.data_config)
     print(dataset_train)
     num_tasks = misc.get_world_size()
     global_rank = misc.get_rank()
@@ -164,7 +188,8 @@ def main(args):
     data_loader_train = torch.utils.data.DataLoader(
         dataset_train, sampler=sampler_train,
         batch_size=args.batch_size,
-        num_workers=args.num_workers,
+        num_workers=0,
+        # num_workers=args.num_workers,
         pin_memory=args.pin_mem,
         drop_last=True,
     )

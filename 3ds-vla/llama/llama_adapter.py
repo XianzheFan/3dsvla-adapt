@@ -38,13 +38,15 @@ class LLaMA_adapter(nn.Module):
         # llama configs
         with open(os.path.join(llama_ckpt_dir, "params.json"), "r") as f:
             params = json.loads(f.read())
+        allowed = {"dim", "n_layers", "n_heads", "vocab_size", "norm_eps", "multiple_of", "ffn_dim_multiplier", "rope_theta"}
+        params = {k: v for k, v in params.items() if k in allowed}
         bias_lora = phase == "finetune"
         model_args: ModelArgs = ModelArgs(
             max_seq_len=max_seq_len, max_batch_size=max_batch_size, **params     ###llaama参数
         ) # max_batch_size only affects inferenc
         
         # 1. clip and clip projector
-        self.clip, self.clip_transform = clip.load(clip_model,download_root='/qiyuan_research_vepfs_001/lixiaoqi/3ds-vla/3ds-vla/pretrain')
+        self.clip, self.clip_transform = clip.load(clip_model,download_root='3ds-vla/pretrain')
         if args is not None:
             if args.clip_only:
             
@@ -97,7 +99,7 @@ class LLaMA_adapter(nn.Module):
         self.llama = Transformer(model_args)
         torch.set_default_tensor_type(torch.FloatTensor)
 
-        ckpts = ['/qiyuan_research_vepfs_001/lixiaoqi/3ds-vla/3ds-vla/pretrain/llama_model_weights/7B/consolidated.00.pth']
+        ckpts = ['3ds-vla/pretrain/llama_model_weights/7B/consolidated.00.pth']
         for ckpt in ckpts:
             print('load_ckpt_path:', ckpt)
             ckpt = torch.load(ckpt, map_location='cpu')

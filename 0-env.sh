@@ -1,4 +1,8 @@
-conda create 3ds-vla python=3.8
+# conda create 3ds-vla python=3.8
+conda create -n 3ds-vla python=3.8 -y
+conda init
+conda activate 3ds-vla
+python -V
 # export COPPELIASIM_ROOT=./CoppeliaSim_Edu_V4_1_0_Ubuntu20_04 # follow the repo from peract to download CoppeliaSim
 # export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$COPPELIASIM_ROOT
 # export QT_QPA_PLATFORM_PLUGIN_PATH=$COPPELIASIM_ROOT
